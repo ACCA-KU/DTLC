@@ -1,0 +1,5 @@
+Model : model_5
+About data : C_paper / no dup mol
+PE : hexane
+Pooling : add
+etc : 
