@@ -2,7 +2,7 @@
 
 ---
 
-## LLM_data_Extractor/GPT_API_whole_paper.ipynb
+## DB/LLM_data_Extractor/GPT_API_whole_paper.ipynb
 This notebook provides a tool for automatically extracting data from research papers using the OpenAI API (GPT-4.1-mini).
 
 *You will need to create and provide your own OpenAI API key to use this notebook.*
