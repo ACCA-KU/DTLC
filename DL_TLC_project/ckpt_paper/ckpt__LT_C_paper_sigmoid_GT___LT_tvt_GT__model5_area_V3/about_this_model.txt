@@ -1,5 +1,0 @@
-Model : model_5_area
-About data : C_paper_molecular parma / no dup mol
-PE : hex
-Pooling : add
-etc : train test valid
