@@ -1,0 +1,4 @@
+,data_ID,compound name,Smiles,eluent1,eluent2,ratio,Rf,title,doi,publish
+0,"2,5-Dibromocyclohepta-2,4,6-trien-1-one_petroleum ether_ethyl acetate_3/1_0.3",358,BrC=1C(C=CC(=CC1)Br)=O,petroleum ether,ethyl acetate,3/1,0.3,The Palladium-Catalyzed Glycosylation of Halotropones,https://pubs.acs.org/doi/10.1021/acs.orglett.2c04099#_i7,"2023,25,2"
+1,2-bromo-5-phenylcyclohept-2-en-1-one_petroleum ether_ethyl acetate_10/1_0.2,PT-13,BrC=1C(CCC(CC1)C1=CC=CC=C1)=O,petroleum ether,ethyl acetate,10/1,0.2,The Palladium-Catalyzed Glycosylation of Halotropones,https://pubs.acs.org/doi/10.1021/acs.orglett.2c04099#_i7,"2023,25,2"
+2,"6-bromo-2-methoxy-8,9-dihydro-5H-benzo[7]annulen-5-one_petroleum ether_ethyl acetate_10/1_0.2",PT-1011,BrC=1C(C2=C(CCC1)C=C(C=C2)OC)=O,petroleum ether,ethyl acetate,10/1,0.2,The Palladium-Catalyzed Glycosylation of Halotropones,https://pubs.acs.org/doi/10.1021/acs.orglett.2c04099#_i7,"2023,25,2"

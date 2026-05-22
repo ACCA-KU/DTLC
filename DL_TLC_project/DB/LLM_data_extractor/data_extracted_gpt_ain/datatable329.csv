@@ -1,0 +1,4 @@
+,data_ID,compound name,Smiles,eluent1,eluent2,ratio,Rf,title,doi,publish
+0,"2,7-Dibromo-9-fluorenone_hexane_DCM_1/1_0.5",3c,BrC1=CC=2C(C3=CC(=CC=C3C2C=C1)Br)=O,hexane,DCM,1/1,0.5,Synthesis and Properties of Achiral and Chiral Dipyrenoheteroles and Related Compounds,https://pubs.acs.org/doi/10.1021/acs.orglett.2c04071,"2023,25,1"
+1,"3,7-Dibromodibenzo[b,d]furan_hexane_DCM_1/1_0.6",3b,BrC=1C=CC2=C(OC3=C2C=CC(=C3)Br)C1,hexane,DCM,1/1,0.6,Synthesis and Properties of Achiral and Chiral Dipyrenoheteroles and Related Compounds,https://pubs.acs.org/doi/10.1021/acs.orglett.2c04071,"2023,25,1"
+2,"3,7-Dibromodibenzo[b,d]thiophene_hexane_DCM_3/1_0.3",3a,BrC=1C=CC2=C(SC3=C2C=CC(=C3)Br)C1,hexane,DCM,3/1,0.3,Synthesis and Properties of Achiral and Chiral Dipyrenoheteroles and Related Compounds,https://pubs.acs.org/doi/10.1021/acs.orglett.2c04071,"2023,25,1"
