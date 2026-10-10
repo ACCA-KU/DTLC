@@ -1,0 +1,15 @@
+import SSC
+p=SSC.train(data='Rf&nat_sf', 
+            molecule_columns=['Smiles','eluent1_smiles','eluent2_smiles'], 
+            numeric_input_columns=['ratio1','ratio2',
+                                   'LogP1','MolMR1','TPSA1','HBA1','HBD1','RotB1','MW1','AromaticProportion1','dipole1','dielec1',
+                                   'LogP2','MolMR2','TPSA2','HBA2','HBD2','RotB2','MW2','AromaticProportion2','dipole2','dielec2',
+                                   ], 
+            target=['Rf'],
+            network='SSC_multi_sf',
+            device = 'cuda:0',
+            learning_rate = 1e-3,
+            hidden_dim=256,
+            conv_layers=6,
+            max_epoch=5000,
+            lr_patience=150,)

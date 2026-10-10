@@ -1,0 +1,13 @@
+__pycache__/
+_Models/
+_Graphs/
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.py[cod]
+*$py.class
+Untitled*
+
+graph_error.csv
+SGC_multi_test.ipynb
+# C extensions
+*.so
