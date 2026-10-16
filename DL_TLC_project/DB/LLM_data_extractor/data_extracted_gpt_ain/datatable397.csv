@@ -1,4 +1,0 @@
-,data_ID,compound name,Smiles,eluent1,eluent2,ratio,Rf,title,doi,publish
-0,"(1S,6S)-3-tosyl-3-azabicyclo[4.1.0]hept-4-ene_PE_EA_10/1_0.5",5a,S(=O)(=O)(C1=CC=C(C)C=C1)N1C[C@H]2C[C@@H]2C=C1,PE,EA,10/1,0.5,Two Divergent Enyne Cycloisomerization Routes Mediated by Monoallenylidene Pd(II) Catalysts,https://pubs.acs.org/doi/10.1021/acs.orglett.2c03205,"2022,24,44"
-1,(E)-3-ethylidene-5-methylene-1-tosylpiperidine_PE_EA_10/1_0.35,6b,C(/C)=C/1\CN(CC(C1)=C)S(=O)(=O)C1=CC=C(C)C=C1,PE,EA,10/1,0.35,Two Divergent Enyne Cycloisomerization Routes Mediated by Monoallenylidene Pd(II) Catalysts,https://pubs.acs.org/doi/10.1021/acs.orglett.2c03205,"2022,24,44"
-2,"3,5-dimethylene-1-tosylpiperidine_PE_EA_10/1_0.35",6a,C=C1CN(CC(C1)=C)S(=O)(=O)C1=CC=C(C)C=C1,PE,EA,10/1,0.35,Two Divergent Enyne Cycloisomerization Routes Mediated by Monoallenylidene Pd(II) Catalysts,https://pubs.acs.org/doi/10.1021/acs.orglett.2c03205,"2022,24,44"
