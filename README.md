@@ -17,9 +17,9 @@ This notebook contains code for training and validating a model that predicts TL
 ## 추가 수정 & 결정 사항
 [결정사항]
 
-dummy data + train 코드 포함
-or 
-data (X) + ckpt 모델 돌리는 코드만
+- dummy data + train 코드 포함
+or
+- data (X) + ckpt 모델 돌리는 코드만
 
 [추가 수정]
 - figure에 있는 데이터 돌리는 코드
