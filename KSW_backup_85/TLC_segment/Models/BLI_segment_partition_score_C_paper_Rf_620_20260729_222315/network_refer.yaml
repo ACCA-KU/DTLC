@@ -1,0 +1,331 @@
+AFP:
+  data_manager_class: MolDataManager
+  data_manager_module: MolDataManager
+  description: AFP
+  name: AFP1
+  network: AFP_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+AFP_MolMerger:
+  data_manager_class: MolMergerDataManager
+  data_manager_module: MolMergerDataManager
+  description: AFP with MolMerger
+  name: AFP_MolMerger1
+  network: AFP_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+AFPwS:
+  data_manager_class: MolDataManager_withSolv
+  data_manager_module: MolDataManager
+  description: AFP
+  name: AFP1
+  network: AFPwithSolv_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+AFPwS_InterMap:
+  data_manager_class: MolDataManager_withSolv
+  data_manager_module: MolDataManager
+  description: AFP with Solvent Interaction Map
+  name: AFPwithSolv_InterMap1
+  network: AFPwithSolv_InterMap_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+AGC:
+  data_manager_class: ISADataManager
+  data_manager_module: ISADataManager
+  description: AGC
+  max_dist: 1
+  name: AGC1
+  network: AGC_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: ISATrainer
+  train_manager_module: ISATrainManager
+  version: '1.0'
+ALIGNN:
+  data_manager_class: TripletDataManager
+  data_manager_module: TripletDataManager
+  description: GCN
+  name: ALIGNN
+  network: ALIGNN_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+ALIGNNwS:
+  data_manager_class: TripletDataManager_withSolv
+  data_manager_module: TripletDataManager
+  description: GCN
+  name: ALIGNNwithSolvent
+  network: ALIGNNwithSolv_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+DMPNN:
+  data_manager_class: MolDataManager
+  data_manager_module: MolDataManager
+  description: DMPNN
+  name: DMPNN1
+  network: DMPNN_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+DMPNN_MolMerger:
+  data_manager_class: MolMergerDataManager
+  data_manager_module: MolMergerDataManager
+  description: DMPNN with MolMerger
+  name: DMPNN_MolMerger1
+  network: DMPNN_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+DMPNNwS:
+  data_manager_class: MolDataManager_withSolv
+  data_manager_module: MolDataManager
+  description: DMPNN
+  name: DMPNN1withSolvent
+  network: DMPNNwithSolv_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+DMPNNwS_InterMap:
+  data_manager_class: MolDataManager_withSolv
+  data_manager_module: MolDataManager
+  description: DMPNN with Solvent Interaction Map
+  name: DMPNNwithSolv_InterMap1
+  network: DMPNNwithSolv_InterMap_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+GAT:
+  data_manager_class: MolDataManager
+  data_manager_module: MolDataManager
+  description: GAT
+  name: GAT1
+  network: GAT_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+GAT_MolMerger:
+  data_manager_class: MolMergerDataManager
+  data_manager_module: MolMergerDataManager
+  description: GAT with MolMerger
+  name: GAT_MolMerger1
+  network: GAT_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+GAT_Multi:
+  data_manager_class: MolDataManager_v1p3
+  data_manager_module: MolDataManager
+  description: GAT Multi
+  name: GAT_Multi1
+  network: GAT_multi_test
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.3'
+GATwS:
+  data_manager_class: MolDataManager_withSolv
+  data_manager_module: MolDataManager
+  description: GAT
+  name: GAT1withSolvent
+  network: GATwithSolv_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+GATwS_InterMap:
+  data_manager_class: MolDataManager_withSolv
+  data_manager_module: MolDataManager
+  description: GAT with Solvent Interaction Map
+  name: GATwithSolv_InterMap1
+  network: GATwithSolv_InterMap_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+GC:
+  data_manager_class: ISADataManager
+  data_manager_module: ISADataManager
+  description: GC
+  name: GC1
+  network: GC_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: ISATrainer
+  train_manager_module: ISATrainManager
+  version: '1.0'
+GCN:
+  data_manager_class: MolDataManager
+  data_manager_module: MolDataManager
+  description: GCN
+  name: GCN1
+  network: GCN_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+GCN_MolMerger:
+  data_manager_class: MolMergerDataManager
+  data_manager_module: MolMergerDataManager
+  description: GCN with MolMerger
+  name: GCN_MolMerger1
+  network: GCN_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+GCNwS:
+  data_manager_class: MolDataManager_withSolv
+  data_manager_module: MolDataManager
+  description: GCN
+  name: GCN1withSolvent
+  network: GCNwithSolv_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+GCNwS_InterMap:
+  data_manager_class: MolDataManager_withSolv
+  data_manager_module: MolDataManager
+  description: GCN with Solvent Interaction Map
+  name: GCNwithSolv_InterMap1
+  network: GCNwithSolv_InterMap_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+ISAT:
+  data_manager_class: ISADataManager
+  data_manager_module: ISADataManager
+  description: IGS
+  name: ISAT1
+  network: ISAT_model
+  network_manager_class: ISANetworkManager
+  network_manager_module: ISANetworkManager
+  train_manager_class: ISATrainer
+  train_manager_module: ISATrainManager
+  version: '1.0'
+ISATPN:
+  data_manager_class: ISADataManager
+  data_manager_module: ISADataManager
+  description: IGSPM
+  name: ISATPN
+  network: ISATPM_model
+  network_manager_class: ISANetworkManager
+  network_manager_module: ISANetworkManager
+  train_manager_class: ISATrainer
+  train_manager_module: ISATrainManager
+  version: '1.0'
+ISAT_Multi:
+  data_manager_class: ISADataManager_v1p3
+  data_manager_module: ISADataManager
+  description: ISA Multi
+  name: ISAT_Multi1
+  network: ISAT_multi_test
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.3'
+MPNN:
+  data_manager_class: MolDataManager
+  data_manager_module: MolDataManager
+  description: MPNN
+  name: MPNN1
+  network: MPNN_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+MPNN_MolMerger:
+  data_manager_class: MolMergerDataManager
+  data_manager_module: MolMergerDataManager
+  description: MPNN with MolMerger
+  name: MPNN_MolMerger1
+  network: MPNN_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+MPNNwS:
+  data_manager_class: MolDataManager_withSolv
+  data_manager_module: MolDataManager
+  description: MPNN
+  name: MPNN1withSolvent
+  network: MPNNwithSolv_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+MPNNwS_InterMap:
+  data_manager_class: MolDataManager_withSolv
+  data_manager_module: MolDataManager
+  description: MPNN with Solvent Interaction Map
+  name: MPNNwithSolv_InterMap1
+  network: MPNNwithSolv_InterMap_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+MegNet:
+  data_manager_class: OverallDataManager
+  data_manager_module: OverallDataManager
+  description: MegNet
+  name: MegNet1
+  network: MegNet_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'
+MegNetwS:
+  data_manager_class: OverallDataManager_withSolv
+  data_manager_module: OverallDataManager
+  description: MegNet
+  name: MegNet1withSolvent
+  network: MegNetwithSolv_model
+  network_manager_class: NetworkManager
+  network_manager_module: NetworkManager
+  train_manager_class: Trainer
+  train_manager_module: TrainManager
+  version: '1.0'

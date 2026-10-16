@@ -1,0 +1,51 @@
+DATA_PATH: /home/ufslab223/KSW/SSC_org_git/data/C_paper.csv
+DataManager_PATH: /home/ufslab223/KSW/SSC_org_git/SSC/src/SSCDataManager
+GRAPH_DIR: ./_Graphs
+MODEL_DIR: ./_Models
+MODEL_PATH: ./_Models/BLI_segment_attention_no_softmax_C_paper_Rf_620_20260617_074013
+batch_size: 256
+d_edge_dim: 4
+d_node_dim: 1
+data: C_paper
+data_manager_class: ISADataManager_v1p3
+data_manager_module: ISADataManager
+description: Bulk eluent representation with segment-level interaction and attention
+  without softmax
+device: cuda:2
+early_stopping_patience: 200
+edge_dim: 8
+explicit_h_columns:
+- solvent
+i_edge_dim: 0
+i_node_dim: 1
+learning_rate: 0.001
+lr_patience: 80
+max_epoch: 2000
+min_lr: 1.0e-05
+molecule_columns:
+- Smiles
+- eluent1_smiles
+- eluent2_smiles
+name: BLI_segment_attention_no_softmax
+network: BLI_segment_attention_no_softmax
+network_manager_class: ISANetworkManager
+network_manager_module: ISANetworkManager
+node_dim: 45
+numeric_input_columns:
+- ratio1
+- ratio2
+optimizer: Adam
+pin_memory: false
+r_edge_dim: 8
+r_node_dim: 45
+scaler: standard
+sculptor_a: 0
+sculptor_c: 2
+sculptor_s: 6
+target:
+- Rf
+target_dim: 1
+train_manager_class: ISATrainer
+train_manager_module: ISATrainManager
+version: '1.3'
+weight_decay: 0.0005
