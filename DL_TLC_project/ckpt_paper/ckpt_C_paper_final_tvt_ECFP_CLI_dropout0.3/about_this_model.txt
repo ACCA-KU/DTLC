@@ -1,0 +1,5 @@
+Model : CLI_ECFP_descriptor_MLP
+About data : C_paper / no dup mol
+PE : hex
+Pooling : add
+etc : 

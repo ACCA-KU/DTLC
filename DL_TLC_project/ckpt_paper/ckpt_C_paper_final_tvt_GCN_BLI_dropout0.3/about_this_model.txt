@@ -1,0 +1,5 @@
+Model : model_5(dropout=0.3)
+About data : C_paper / no dup mol
+PE : hex
+Pooling : add
+etc : 

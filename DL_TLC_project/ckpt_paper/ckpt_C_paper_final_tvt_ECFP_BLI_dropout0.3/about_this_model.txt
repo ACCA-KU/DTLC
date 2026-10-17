@@ -1,0 +1,5 @@
+Model : BLI ECFP+descriptor MLP
+About data : C_paper / no dup mol
+PE : hex
+Pooling : add
+etc : 
