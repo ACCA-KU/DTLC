@@ -10,7 +10,7 @@ class DMPNN(torch.nn.Module):
     torch_geometric `Data(edge_index, edge_attr, x)`에 맞춰 구현한 분자 임베딩 모듈.
 
     - 입력: data.x (V x 48), data.edge_index (2 x E), data.edge_attr (E x 1)
-    - 출력: node embeddings (V x 128)
+    - 출력: node embeddings (V x N)
     """
 
     def __init__(
@@ -151,7 +151,7 @@ class DMPNN(torch.nn.Module):
 # ================================================================================
 
 
-class DMPNN_eluent_interaction_3(torch.nn.Module):
+class DMPNN_CLI(torch.nn.Module):
     def __init__(self, dropout=0.0):
         super().__init__()
         self.DMPNN_compound = DMPNN()
@@ -220,11 +220,109 @@ class DMPNN_eluent_interaction_3(torch.nn.Module):
             retention = layer(retention)
         return retention
 
+# ================================================================================
+
+
+class DMPNN_CLI_3body(torch.nn.Module):
+    def __init__(self, dropout=0.0):
+        super().__init__()
+        self.DMPNN_compound = DMPNN()
+        self.DMPNN_eluent = DMPNN()
+        self.dropout = dropout
+
+        self.interaction_linear_list = nn.ModuleList(
+            [
+                pyg_nn.Linear(in_channels=256, out_channels=1024),
+                nn.LeakyReLU(0.1),
+                nn.BatchNorm1d(1024),
+                nn.Dropout(self.dropout),
+                pyg_nn.Linear(1024, 512),
+                nn.LeakyReLU(0.1),
+                nn.BatchNorm1d(512),
+            ]
+        )
+
+        self.elu_interaction_linear_list = nn.ModuleList(
+            [
+                pyg_nn.Linear(in_channels=256, out_channels=1024),
+                nn.LeakyReLU(0.1),
+                nn.BatchNorm1d(1024),
+                nn.Dropout(self.dropout),
+                pyg_nn.Linear(1024, 512),
+                nn.LeakyReLU(0.1),
+                nn.BatchNorm1d(512),
+            ]
+        )
+
+        self.pred_list = nn.ModuleList(
+            [
+                pyg_nn.Linear(in_channels=512, out_channels=256),
+                nn.LeakyReLU(0.1),
+                nn.BatchNorm1d(256),
+                pyg_nn.Linear(in_channels=256, out_channels=128),
+                nn.LeakyReLU(0.1),
+                nn.BatchNorm1d(128),
+                pyg_nn.Linear(128, 1),
+            ]
+        )
+
+
+        self.interaction_linear_list.apply(self._init_weights)
+        self.pred_list.apply(self._init_weights)
+        self.elu_interaction_linear_list.apply(self._init_weights)
+
+    def _init_weights(self, m):
+        if isinstance(m, (nn.Linear, pyg_nn.Linear)):
+            nn.init.xavier_uniform_(m.weight)
+            if m.bias is not None:
+                nn.init.zeros_(m.bias)
+
+    def forward(self, compound_data, elu1_data, elu2_data):
+        compound_emb = self.DMPNN_compound(compound_data)
+        elu1_emb = self.DMPNN_eluent(elu1_data)
+        elu2_emb = self.DMPNN_eluent(elu2_data)
+
+        compound_pooled = pyg_nn.global_add_pool(compound_emb, compound_data.batch)
+        elu1_pooled = pyg_nn.global_add_pool(elu1_emb, elu1_data.batch)
+        elu2_pooled = pyg_nn.global_add_pool(elu2_emb, elu2_data.batch)
+
+        concat1 = torch.cat([compound_pooled, elu1_pooled], dim=-1)
+        concat2 = torch.cat([compound_pooled, elu2_pooled], dim=-1)
+        concat3_1 = torch.cat([elu1_pooled, elu2_pooled], dim=-1)
+        concat3_2 = torch.cat([elu2_pooled, elu1_pooled], dim=-1)
+
+        interaction1 = concat1
+        interaction2 = concat2
+        interaction3_1 = concat3_1
+        interaction3_2 = concat3_2
+        for layer in self.interaction_linear_list:
+            interaction1 = layer(interaction1)
+        for layer in self.interaction_linear_list:
+            interaction2 = layer(interaction2)
+        for layer in self.elu_interaction_linear_list:
+            interaction3_1 = layer(interaction3_1)
+        for layer in self.elu_interaction_linear_list:
+            interaction3_2 = layer(interaction3_2)
+
+        eluent_interaction = 0.5*(interaction3_1+interaction3_2)
+
+        ratio1 = compound_data.ratio[:, 0].view(-1, 1)
+        ratio2 = compound_data.ratio[:, 1].view(-1, 1)
+        ratio_min = torch.minimum(ratio1, ratio2)
+
+        united_interactions = interaction1 * ratio1 + interaction2 * ratio2 + eluent_interaction * ratio_min
+
+        retention = united_interactions
+        for layer in self.pred_list:
+            retention = layer(retention)
+        return retention
+
+
 
 # ================================================================================
 
 
-class DMPNN_eluent_interaction_5(torch.nn.Module):
+class DMPNN_BLI(torch.nn.Module):
     def __init__(self, dropout=0.0):
         super().__init__()
         self.DMPNN_compound = DMPNN()
