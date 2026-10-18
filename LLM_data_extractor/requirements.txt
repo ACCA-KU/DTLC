@@ -1,0 +1,9 @@
+ipython
+jupyter
+numpy
+openai>=1.0
+pandas
+pdf2image
+pdfminer.six
+rich
+tqdm

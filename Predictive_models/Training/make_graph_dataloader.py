@@ -110,6 +110,8 @@ def make_x(mol):
 ################################################################### make_edge_index ############################################################### 
 def make_edge_index(mol):
     #mol = Chem.MolFromSmiles(ChromSol)
+    if mol.GetNumBonds() == 0:
+        return np.empty((2, 0), dtype=np.int64)
     starting_atoms = np.hstack([(bond.GetBeginAtom().GetIdx(), bond.GetEndAtom().GetIdx()) for bond in mol.GetBonds()])
     terminal_atoms = np.hstack([(bond.GetEndAtom().GetIdx(), bond.GetBeginAtom().GetIdx()) for bond in mol.GetBonds()])
     edge_index = np.vstack([starting_atoms, terminal_atoms])
@@ -122,6 +124,8 @@ def make_edge_index(mol):
 def make_edge_attr(mol):
     
     #mol = Chem.MolFromSmiles(ChromSol)
+    if mol.GetNumBonds() == 0:
+        return np.empty((0, 1), dtype=np.float32)
     
     bond_weight = {Chem.rdchem.BondType.SINGLE : 1,
                   Chem.rdchem.BondType.AROMATIC : 1.5,
@@ -136,7 +140,19 @@ def make_edge_attr(mol):
 
 
 class MolToGraph(InMemoryDataset):
-    def __init__(self, smiles, root, raw_name, preocessed_name, molecular_param, augment=False, transform=None, pre_transform=None, pre_filter=None):
+    def __init__(
+        self,
+        smiles,
+        root,
+        raw_name,
+        preocessed_name,
+        molecular_param,
+        augment=False,
+        transform=None,
+        pre_transform=None,
+        pre_filter=None,
+        standardization_dir=None,
+    ):
 
         # smiles : 'ChromSol' or 'Chromophore_smiles' or 'Solvent_smiles' 
         
@@ -145,8 +161,14 @@ class MolToGraph(InMemoryDataset):
         self.preocessed_name = preocessed_name
         self.molecular_param = bool(molecular_param)
         self.augment = bool(augment)
-        self.mean = np.load('/home/ufslab223/Shared/KSW/torch_geometric/TLC_RF/standardization/mean.npy')
-        self.std = np.load('/home/ufslab223/Shared/KSW/torch_geometric/TLC_RF/standardization/std.npy')
+        if standardization_dir is None:
+            standardization_dir = os.path.join(
+                os.path.dirname(os.path.abspath(__file__)),
+                "standardization",
+            )
+        self.standardization_dir = os.path.abspath(standardization_dir)
+        self.mean = np.load(os.path.join(self.standardization_dir, "mean.npy"))
+        self.std = np.load(os.path.join(self.standardization_dir, "std.npy"))
         super().__init__(root, transform, pre_transform, pre_filter)
         self.load(self.processed_paths[0])
         
@@ -192,6 +214,11 @@ class MolToGraph(InMemoryDataset):
             
             else:
                 mol = Chem.MolFromSmiles(ChromSol)
+                if mol is None:
+                    raise ValueError(
+                        f"Invalid SMILES in column '{self.smiles}' at row {i}: "
+                        f"{ChromSol}"
+                    )
                 x = torch.tensor(make_x(mol), dtype = torch.float)
                 edge_index = torch.tensor(make_edge_index(mol), dtype = torch.long)
                 edge_attr = torch.tensor(make_edge_attr(mol), dtype = torch.float)

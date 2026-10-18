@@ -1,0 +1,4 @@
+opsin-cli-*-jar-with-dependencies.jar
+*.jar.part
+.env
+__pycache__/
