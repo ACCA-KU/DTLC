@@ -12,6 +12,10 @@ This notebook provides a tool for automatically extracting data from research pa
 ## Train_valid_test.ipynb
 This notebook contains code for training and validating a model that predicts TLC Rf values.
 
+
+
+
+
 ---
 
 ## 추가 수정 & 결정 사항
@@ -22,6 +26,8 @@ This notebook contains code for training and validating a model that predicts TL
 --> SEI에도 같은 데이터 되도록 변경 필요. 다만 train/valid/test 따로 올리지 않고 'set' 칼럼에 어떤 set인지 표시 (\SEI_models\data)
 
 sei models/ ~~~ train.ipynb 에서 모델 고르도록 모델명 옵션 적어두기
+
+
 
 
 {아인님 수정 필요}
@@ -39,3 +45,10 @@ sei models/ ~~~ train.ipynb 에서 모델 고르도록 모델명 옵션 적어�
 3. \SEI_models\Models: SEI 의 ckpt 모델 논문에 쓴것만 가져다 놓기 (여기엔 다 삭제해둠)
 
 4. SEI_models\_analysis_copy_segmentmodel.ipynb : figure에 있는 데이터 재현하는 코드로 변경해야함
+
+
+
+setup 설정 완료 후 read me에 공지
+pip install git+https://github.com/~~~~최종 레퍼지토리 이름~~~~.git
+
+통합 셋업 어려우면 predictive, SEI 나누어서
