@@ -21,9 +21,7 @@ This notebook contains code for training and validating a model that predicts TL
 ## 추가 수정 & 결정 사항
 [결정사항]
 
-!!! predictive models의 기존 데이터(실제임) --> 10개 정도만 남겨서 더미로 바꾸기
-
---> SEI에도 같은 데이터 되도록 변경 필요. 다만 train/valid/test 따로 올리지 않고 'set' 칼럼에 어떤 set인지 표시 (\SEI_models\data)
+데이터 100개만 남김 (train 80, val 10, test 10)
 
 sei models/ ~~~ train.ipynb 에서 모델 고르도록 모델명 옵션 적어두기
 
