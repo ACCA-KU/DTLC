@@ -34,7 +34,9 @@ sei models/ ~~~ train.ipynb 에서 모델 고르도록 모델명 옵션 적어�
 
 [predictive models]
 
-~~1. Predictive_models\model_validation : 논문에 예측 모델 결과 뽑은거 재현 해두는 코드~~
+~~1. Predictive_models\model_validation : 논문에 예측 모델 결과 뽑은거 재현 해두는 코드~~ 
+/Predictive_models/model_validation/model_validation.ipynb
+/Predictive_models/model_validation/rf_prediction.ipynb
 
 [SEI models]
 
