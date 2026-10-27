@@ -34,11 +34,11 @@ sei models/ ~~~ train.ipynb 에서 모델 고르도록 모델명 옵션 적어�
 
 [predictive models]
 
-1. Predictive_models\model_validation : 논문에 예측 모델 결과 뽑은거 재현 해두는 코드
+~~1. Predictive_models\model_validation : 논문에 예측 모델 결과 뽑은거 재현 해두는 코드~~
 
 [SEI models]
 
-1. \SEI_models\SSC\src\SSCnet : 여기에 현재 사용하는 group contribution모델이 없는것 같아서 넣어줘햐 할 거같아요
+~~1. \SEI_models\SSC\src\SSCnet : 여기에 현재 사용하는 group contribution모델이 없는것 같아서 넣어줘햐 할 거같아요~~
 
 2. \SEI_models\SSC\src\network_refer.yaml : 이것도 마찬가지...
 
