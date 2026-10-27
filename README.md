@@ -44,7 +44,7 @@ sei models/ ~~~ train.ipynb 에서 모델 고르도록 모델명 옵션 적어�
 
 2. \SEI_models\SSC\src\network_refer.yaml : 이것도 마찬가지...
 
-3. \SEI_models\Models: SEI 의 ckpt 모델 논문에 쓴것만 가져다 놓기 (여기엔 다 삭제해둠)
+3. \SEI_models\Trained_models: SEI 의 ckpt 모델 논문에 쓴것만 가져다 놓기 (여기엔 다 삭제해둠)
 
 4. SEI_models\_analysis_copy_segmentmodel.ipynb : figure에 있는 데이터 재현하는 코드로 변경해야함
 
