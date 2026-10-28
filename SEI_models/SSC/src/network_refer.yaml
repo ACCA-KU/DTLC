@@ -118,6 +118,18 @@ BLI_segment_attention_simple:
   description: "Bulk eluent representation with segment-level interaction and attention using big MLP-->concat "
   version: "1.3"
 
+BLI_segment_sum_contribution:
+  name: "BLI_segment_sum_contribution"
+  network: BLI_segment_sum_contribution
+  data_manager_module: ISADataManager
+  data_manager_class: ISADataManager_v1p3
+  network_manager_module: ISANetworkManager
+  network_manager_class: ISANetworkManager
+  train_manager_module: ISATrainManager
+  train_manager_class: ISATrainer
+  description: "Final Rf value is obtained by summing up the contributions of each subgraph"
+  version: "1.3"
+
 CLI_segment:
   name: "CLI_segment"
   network: CLI_segment
@@ -214,4 +226,16 @@ CLI_segment_attention_simple:
   train_manager_module: ISATrainManager
   train_manager_class: ISATrainer
   description: "component-level eluent representation with segment-level interaction and attention using big MLP-->concat "
+  version: "1.3"
+
+CLI_segment_sum_contribution:
+  name: "CLI_segment_sum_contribution"
+  network: CLI_segment_sum_contribution
+  data_manager_module: ISADataManager
+  data_manager_class: ISADataManager_v1p3
+  network_manager_module: ISANetworkManager
+  network_manager_class: ISANetworkManager
+  train_manager_module: ISATrainManager
+  train_manager_class: ISATrainer
+  description: "Final Rf value is obtained by summing up the contributions of each subgraph "
   version: "1.3"
