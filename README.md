@@ -73,11 +73,3 @@ Conda environment for running:
 conda env create -f environment.yml
 conda activate tlc
 ```
-
-## Register Jupyter kernel
-
-```bash
-python -m ipykernel install --user --name tlc --display-name "TLC"
-```
-
-Then select **TLC** as the kernel in JupyterLab.
