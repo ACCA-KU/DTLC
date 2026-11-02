@@ -12,49 +12,38 @@ This notebook provides a tool for automatically extracting data from research pa
 ## Train_valid_test.ipynb
 This notebook contains code for training and validating a model that predicts TLC Rf values.
 
+## Model Training
+Only dummy data for demonstrating training is included, so the training results are not reproducible.
+|  |  |
+|------|------|
+| **BLI-GAT model(Figure 8, S7)** | Predictive_models/model_validation/rf_prediction.ipynb |
+| **BLI-GAT-SEI model(Figure 7)** | SEI_models/BLI_GAT_SEI_contribution.ipynb |
+
+## Model Validation
+
+|  |  |
+|------|------|
+| **BLI-GAT model(Figure 8, S7)** | Predictive_models/model_validation/rf_prediction.ipynb |
+| **BLI-GAT-SEI model(Figure 7)** | SEI_models/BLI_GAT_SEI_contribution.ipynb |
+
+
+
+## BLI-GAT model
+
+<img width="1590" height="1430" alt="image" src="https://github.com/user-attachments/assets/d0275b9f-b9a4-49a6-bc3d-fa9b3bd6caa6" />
+<img width="790" height="1430" alt="image" src="https://github.com/user-attachments/assets/171e4ef1-fbed-4667-8fe5-47291c8b81ad" />
+
+
+
+## BLI-GAT-SEI model
+<img width="1987" height="1290" alt="image" src="https://github.com/user-attachments/assets/45eb9385-1176-4ef3-b693-ce9171377cf2" />
 
 
 
 
----
-
-## 추가 수정 & 결정 사항
-[결정사항]
-
-데이터 100개만 남김 (train 80, val 10, test 10)
-
-sei models/ ~~~ train.ipynb 에서 모델 고르도록 모델명 옵션 적어두기
-
-
-
-
-{아인님 수정 필요}
-
-[predictive models]
-
-~~1. Predictive_models\model_validation : 논문에 예측 모델 결과 뽑은거 재현 해두는 코드~~ 
-/Predictive_models/model_validation/model_validation.ipynb
-/Predictive_models/model_validation/rf_prediction.ipynb
-
-[SEI models]
-
-~~1. \SEI_models\SSC\src\SSCnet : 여기에 현재 사용하는 group contribution모델이 없는것 같아서 넣어줘햐 할 거같아요~~
-
-~~2. \SEI_models\SSC\src\network_refer.yaml : 이것도 마찬가지...~~
-
-~~3. \SEI_models\Trained_models: SEI 의 ckpt 모델 논문에 쓴것만 가져다 놓기 (여기엔 다 삭제해둠)~~
-
-~~4. SEI_models\_analysis_copy_segmentmodel.ipynb : figure에 있는 데이터 재현하는 코드로 변경해야함~~
-
-
-
-setup 설정 완료 후 read me에 공지
-pip install git+https://github.com/~~~~최종 레퍼지토리 이름~~~~.git
-
-통합 셋업 어려우면 predictive, SEI 나누어서
 
 ---
-# DTLC Model environment
+# Model Requirements
 
 ## Notes
 - Requires an NVIDIA driver supporting CUDA 11.8.
@@ -73,3 +62,20 @@ Conda environment for running:
 conda env create -f environment.yml
 conda activate tlc
 ```
+
+
+---
+
+## 추가 수정 & 결정 사항
+[결정사항]
+
+데이터 100개만 남김 (train 80, val 10, test 10)
+
+sei models/ ~~~ train.ipynb 에서 모델 고르도록 모델명 옵션 적어두기
+
+
+
+setup 설정 완료 후 read me에 공지
+pip install git+https://github.com/~~~~최종 레퍼지토리 이름~~~~.git
+
+통합 셋업 어려우면 predictive, SEI 나누어서
