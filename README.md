@@ -2,6 +2,9 @@
 
 ---
 
+## Introduction
+`DTLC` is ~
+
 ## DB/LLM_data_Extractor/GPT_API_whole_paper.ipynb
 This notebook provides a tool for automatically extracting data from research papers using the OpenAI API (GPT-4.1-mini).
 
@@ -11,21 +14,6 @@ This notebook provides a tool for automatically extracting data from research pa
 
 ## Train_valid_test.ipynb
 This notebook contains code for training and validating a model that predicts TLC Rf values.
-
-## Model Training
-Only dummy data for demonstrating training is included, so the training results are not reproducible.
-|  |  |
-|------|------|
-| **BLI-GAT model(Figure 8, S7)** | Predictive_models/model_validation/rf_prediction.ipynb |
-| **BLI-GAT-SEI model(Figure 7)** | SEI_models/BLI_GAT_SEI_contribution.ipynb |
-
-## Model Validation
-
-|  |  |
-|------|------|
-| **BLI-GAT model(Figure 8, S7)** | Predictive_models/model_validation/rf_prediction.ipynb |
-| **BLI-GAT-SEI model(Figure 7)** | SEI_models/BLI_GAT_SEI_contribution.ipynb |
-
 
 
 ## BLI-GAT model
