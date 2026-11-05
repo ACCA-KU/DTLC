@@ -2,8 +2,27 @@
 
 ---
 
-## Introduction
-`DTLC` is ~
+## Installation
+
+> **Note**: This repository uses **Git LFS** for large model files (`.pt`). Make sure Git LFS is installed before cloning to download full model weights.
+
+```bash
+# Install Git LFS (if not already installed)
+git lfs install
+
+# Clone repository with LFS files
+git clone https://github.com/ACCA-KU/DTLC
+cd DTLC
+
+# Set up conda environment
+conda env create -f environment.yml
+```
+
+
+
+
+
+
 
 ## DB/LLM_data_Extractor/GPT_API_whole_paper.ipynb
 This notebook provides a tool for automatically extracting data from research papers using the OpenAI API (GPT-4.1-mini).
@@ -16,43 +35,6 @@ This notebook provides a tool for automatically extracting data from research pa
 This notebook contains code for training and validating a model that predicts TLC Rf values.
 
 
-## BLI-GAT model
-
-<img width="1590" height="1430" alt="image" src="https://github.com/user-attachments/assets/d0275b9f-b9a4-49a6-bc3d-fa9b3bd6caa6" />
-<img width="790" height="1430" alt="image" src="https://github.com/user-attachments/assets/171e4ef1-fbed-4667-8fe5-47291c8b81ad" />
-
-
-
-## BLI-GAT-SEI model
-<img width="1987" height="1290" alt="image" src="https://github.com/user-attachments/assets/45eb9385-1176-4ef3-b693-ce9171377cf2" />
-
-
-
-
-
----
-# Model Requirements
-
-## Notes
-- Requires an NVIDIA driver supporting CUDA 11.8.
-
-
-Conda environment for running:
-
-- Python 3.10
-- PyTorch 2.1.2 + CUDA 11.8 
-- DGL 2.1.0 + CUDA 11.8
-- RDKit 2024.9.6
-
-## Setup
-
-```bash
-conda env create -f environment.yml
-conda activate tlc
-```
-
-
----
 
 ## 추가 수정 & 결정 사항
 [결정사항]
