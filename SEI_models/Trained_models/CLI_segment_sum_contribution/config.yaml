@@ -1,8 +1,3 @@
-DATA_PATH: /home/ufslab223/Shared/KSW/KSW_85/TLC_segment/data/C_paper.csv
-DataManager_PATH: /home/ufslab223/Shared/KSW/KSW_85/TLC_segment/SSC/src/SSCDataManager
-GRAPH_DIR: ./_Graphs
-MODEL_DIR: ./_Models
-MODEL_PATH: ./_Models/CLI_segment_sum_contribution_C_paper_Rf_620_20260711_171320
 batch_size: 256
 d_edge_dim: 4
 d_node_dim: 1
