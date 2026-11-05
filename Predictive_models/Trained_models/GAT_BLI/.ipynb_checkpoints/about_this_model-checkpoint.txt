@@ -1,0 +1,5 @@
+Model : GAT_model_5
+About data : C_paper / no dup mol
+PE : hex
+Pooling : add
+etc : 
