@@ -1,3 +1,16 @@
+## 중요 오류! 수정 必
+### !!score 분포 재현 오류!!
+SEI_models/contribution_analysis.ipynb 부분 
+GROUPS = [
+    ('*O', 'Hydroxyl'), ('*N', 'Amino'), ('*C#N', 'Nitrile'),
+    ('*C(=O)O', 'Carboxyl'), ('*C=O', 'Aldehyde'), ('*[N+](=O)[O-]', 'Nitro'),
+    ('c1ccccc1', 'Benzene'), ('*C', 'Methyl'), ('*CCC', 'n-Propyl'),
+    ('C1CCCCC1', 'Cyclohexane'), ('*CC', 'Ethyl'), ('*C(C)C', 'Isopropyl'),
+]
+
+수정 !! *O --> *CO
+
+
 # DTLC: Deep learning for Thin-Layer Chromatography
 
 ---
@@ -34,18 +47,3 @@ This notebook provides a tool for automatically extracting data from research pa
 ## Train_valid_test.ipynb
 This notebook contains code for training and validating a model that predicts TLC Rf values.
 
-
-
-## 추가 수정 & 결정 사항
-[결정사항]
-
-데이터 100개만 남김 (train 80, val 10, test 10)
-
-sei models/ ~~~ train.ipynb 에서 모델 고르도록 모델명 옵션 적어두기
-
-
-
-setup 설정 완료 후 read me에 공지
-pip install git+https://github.com/~~~~최종 레퍼지토리 이름~~~~.git
-
-통합 셋업 어려우면 predictive, SEI 나누어서
