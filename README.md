@@ -31,7 +31,14 @@ This notebook provides a tool for automatically extracting data from research pa
 
 ---
 
-## Predictive_models/Training
-## Predictive_models/model_validation
+### 📂 Project Structure
+
+```text
+Predictive_models/
+├── Training/              # Code for training the TLC Rf prediction model
+└── model_validation/      # Code for validating the trained model
+```
+
 This notebook contains code for training and validating a model that predicts TLC Rf values.
+
 
