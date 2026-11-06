@@ -1,16 +1,3 @@
-## 중요 오류! 수정 必
-### !!score 분포 재현 오류!!
-SEI_models/contribution_analysis.ipynb 부분 
-GROUPS = [
-    ('*O', 'Hydroxyl'), ('*N', 'Amino'), ('*C#N', 'Nitrile'),
-    ('*C(=O)O', 'Carboxyl'), ('*C=O', 'Aldehyde'), ('*[N+](=O)[O-]', 'Nitro'),
-    ('c1ccccc1', 'Benzene'), ('*C', 'Methyl'), ('*CCC', 'n-Propyl'),
-    ('C1CCCCC1', 'Cyclohexane'), ('*CC', 'Ethyl'), ('*C(C)C', 'Isopropyl'),
-]
-
-수정 !! *O --> *CO
-
-
 # DTLC: Deep learning for Thin-Layer Chromatography
 
 ---
