@@ -19,11 +19,6 @@ conda env create -f environment.yml
 ```
 
 
-
-
-
-
-
 ## DB/LLM_data_Extractor/GPT_API_whole_paper.ipynb
 This notebook provides a tool for automatically extracting data from research papers using the OpenAI API (GPT-4.1-mini).
 
@@ -31,10 +26,11 @@ This notebook provides a tool for automatically extracting data from research pa
 
 ---
 
+## Training and evaluating the predictive models.
 * **`Predictive_models/Training`** – Code for training the TLC Rf prediction model.
 * **`Predictive_models/model_validation`** – Code for validating the predictive model's performance.
 
-This notebook contains the complete workflow for building and evaluating the prediction model.
+
 
 
 
