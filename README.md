@@ -31,6 +31,6 @@ This notebook provides a tool for automatically extracting data from research pa
 
 ---
 
-## Train_valid_test.ipynb
+## Predictive_models/Training
 This notebook contains code for training and validating a model that predicts TLC Rf values.
 
