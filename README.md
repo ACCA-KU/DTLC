@@ -17,7 +17,7 @@ cd DTLC
 # Set up conda environment
 conda env create -f environment.yml
 ```
-
+Alternatively, if you encounter installation issues related to CUDA 11.8, you may manually install PyTorch, torchvision, torchaudio, and DGL with CUDA builds compatible with your system by following the official PyTorch and DGL installation guidelines.
 
 ## DB/LLM_data_Extractor/GPT_API_whole_paper.ipynb
 This notebook provides a tool for automatically extracting data from research papers using the OpenAI API (GPT-4.1-mini).
